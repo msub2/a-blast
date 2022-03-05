@@ -5,6 +5,11 @@ module.exports = {
     filename: 'build/build.js'
   },
   devServer: {
-    disableHostCheck: true
+    historyApiFallback: true,
+    allowedHosts: "all",
+    static: {
+      directory: __dirname,
+      publicPath: '/'
+    }
   }
 };
